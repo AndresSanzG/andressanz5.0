@@ -1,0 +1,1484 @@
+.marcador {
+  width: 100%;
+  height: 3px;
+  background: black;
+  position: fixed;
+  left: 0;
+  z-index: 50;
+}
+
+.marcador2 {
+  width: 100%;
+  height: 3px;
+  background: red;
+  position: fixed;
+  left: 0;
+  z-index: 50;
+}
+
+@font-face {
+  font-family: "Aller regular";
+  src: url("../../fonts/fonts/Aller_Rg.ttf");
+}
+
+@font-face {
+  font-family: "Aller display";
+  src: url("../../fonts/Aller_Bd.ttf");
+}
+
+.fut-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1.fut-title {
+  width: 100%;
+  text-align: center;
+  color: #006199;
+  font-family: "Aller Display";
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  h1.fut-title {
+    font-size: 16pt;
+  }
+}
+
+@media (max-width: 500px) {
+  h1.fut-title {
+    font-size: 14pt;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+}
+
+#fut-port {
+  position: relative;
+  background: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  #fut-port {
+    height: 60vh;
+  }
+}
+
+#fut-port .invite-scroll {
+  z-index: 12;
+}
+
+#fut-port .fut-container {
+  height: 100%;
+  position: relative;
+}
+
+#fut-port .fut-container img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+#fut-port .fut-container img:nth-child(1) {
+  -webkit-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+       -o-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
+#fut-port .fut-container img:nth-child(2) {
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+       -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+#fut-port .fut-container img:nth-child(3) {
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+       -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+#fut-port .fut-container img:nth-child(4) {
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+       -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+#fut-port .fut-container img:nth-child(5) {
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+       -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+#fut-port .fut-container img:nth-child(6) {
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+       -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+#fut-port .fut-container img:nth-child(7) {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+       -o-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#fut-intro {
+  height: auto;
+  padding: 4em 0;
+}
+
+@media (max-width: 500px) {
+  #fut-intro {
+    padding: 2em 0;
+  }
+}
+
+#fut-intro .fut-container {
+  width: 90%;
+}
+
+#fut-intro .fut-p-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+  #fut-intro .fut-p-box {
+    padding: 20px 10px;
+  }
+}
+
+#fut-intro .fut-p-box p {
+  font-size: 14pt;
+  color: #565656;
+  width: 30%;
+}
+
+@media (max-width: 1024px) {
+  #fut-intro .fut-p-box p {
+    width: 45%;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-intro .fut-p-box p {
+    width: 100%;
+    font-size: 10pt;
+    line-height: 1.4em;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+#fut-intro .fut-intro-img {
+  width: 100%;
+  height: 200px;
+  margin: 100px 0;
+  position: relative;
+  background: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+#fut-intro .fut-intro-img img {
+  position: absolute;
+  height: 500px;
+  top: -150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  #fut-intro .fut-intro-img img {
+    top: -100px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-intro .fut-intro-img img {
+    top: -100px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-intro .fut-intro-img img {
+    top: -50px;
+    height: auto;
+    width: 40%;
+  }
+}
+
+#fut-intro .fut-intro-img .sp-mobile-apear {
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+#fut-intro .fut-intro-img .mob-rotate-1 {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#fut-intro .fut-intro-img .mob-rotate-2 {
+  -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+       -o-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+#fut-intro .fut-intro-img .mob-rotate-3 {
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+       -o-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+#fut-intro .fut-intro-img .mob-rotate-4 {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#fut-intro .fut-intro-img .mob-rotate-5 {
+  -webkit-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+       -o-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+#fut-intro .fut-intro-img .mob-rotate-6 {
+  -webkit-transform: rotate(-75deg);
+      -ms-transform: rotate(-75deg);
+       -o-transform: rotate(-75deg);
+          transform: rotate(-75deg);
+}
+
+#fut-intro .fut-intro-img .mob-rotate-7 {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#app-start {
+  background: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  background-attachment: fixed;
+  padding: 4em;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  #app-start {
+    padding: 4em 0;
+  }
+}
+
+@media (max-width: 500px) {
+  #app-start {
+    padding: 2em 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #app-start .fut-container {
+    width: 95%;
+  }
+}
+
+#app-start .fases-start {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app-start .fases-start .sp-img {
+  position: relative;
+  width: 40%;
+  height: 45vh;
+}
+
+@media (max-width: 768px) {
+  #app-start .fases-start .sp-img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .sp-img {
+    width: 30%;
+  }
+}
+
+#app-start .fases-start .sp-img img {
+  position: fixed;
+  height: 40vh;
+  margin: auto;
+  left: -25%;
+  right: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  -webkit-transform: translate(0px, 200px);
+      -ms-transform: translate(0px, 200px);
+       -o-transform: translate(0px, 200px);
+          transform: translate(0px, 200px);
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .sp-img img {
+    width: 25%;
+    height: auto;
+  }
+}
+
+#app-start .fases-start .sp-img .imgPos1,
+#app-start .fases-start .sp-img .imgPos2,
+#app-start .fases-start .sp-img .imgPos3 {
+  opacity: 1;
+  top: 5vh;
+  left: -45%;
+}
+
+@media (max-width: 1024px) {
+  #app-start .fases-start .sp-img .imgPos1,
+  #app-start .fases-start .sp-img .imgPos2,
+  #app-start .fases-start .sp-img .imgPos3 {
+    left: -50%;
+    top: 10vh;
+  }
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .sp-img .imgPos1,
+  #app-start .fases-start .sp-img .imgPos2,
+  #app-start .fases-start .sp-img .imgPos3 {
+    left: 10%;
+    right: auto;
+  }
+}
+
+#app-start .fases-start .sp-img .imgPos1 {
+  -webkit-transform: translate(0px, 40px);
+      -ms-transform: translate(0px, 40px);
+       -o-transform: translate(0px, 40px);
+          transform: translate(0px, 40px);
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .sp-img .imgPos1 {
+    -webkit-transform: translate(0px, 10px);
+        -ms-transform: translate(0px, 10px);
+         -o-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+  }
+}
+
+#app-start .fases-start .sp-img .imgPos2 {
+  -webkit-transform: translate(-20px, 20px);
+      -ms-transform: translate(-20px, 20px);
+       -o-transform: translate(-20px, 20px);
+          transform: translate(-20px, 20px);
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .sp-img .imgPos2 {
+    -webkit-transform: translate(-10px, 0px);
+        -ms-transform: translate(-10px, 0px);
+         -o-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+}
+
+#app-start .fases-start .sp-img .imgPos3 {
+  -webkit-transform: translate(-40px, 0px);
+      -ms-transform: translate(-40px, 0px);
+       -o-transform: translate(-40px, 0px);
+          transform: translate(-40px, 0px);
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .sp-img .imgPos3 {
+    -webkit-transform: translate(-20px, -10px);
+        -ms-transform: translate(-20px, -10px);
+         -o-transform: translate(-20px, -10px);
+            transform: translate(-20px, -10px);
+  }
+}
+
+#app-start .fases-start .icon-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 60%;
+  height: 60vh;
+}
+
+@media (max-width: 768px) {
+  #app-start .fases-start .icon-text {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .icon-text {
+    width: 60%;
+    margin-left: 10%;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+#app-start .fases-start .icon-text img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  #app-start .fases-start .icon-text img {
+    width: 35px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .icon-text img {
+    margin: 0 auto;
+    width: 30px;
+  }
+}
+
+#app-start .fases-start .icon-text div {
+  padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+  #app-start .fases-start .icon-text div {
+    padding-left: 10px;
+  }
+}
+
+#app-start .fases-start .icon-text div h2 {
+  font-size: 15pt;
+  color: #006199;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  #app-start .fases-start .icon-text div h2 {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .icon-text div h2 {
+    font-size: 11pt;
+  }
+}
+
+#app-start .fases-start .icon-text div p {
+  font-size: 12pt;
+  line-height: 16pt;
+}
+
+@media (max-width: 500px) {
+  #app-start .fases-start .icon-text div p {
+    font-size: 10pt;
+    line-height: 14pt;
+  }
+}
+
+#princ-pant {
+  position: relative;
+  background: white;
+  padding: 4em 0;
+}
+
+@media (max-width: 768px) {
+  #princ-pant {
+    padding: 2em 0;
+  }
+}
+
+#princ-pant h1 {
+  margin-bottom: 2em;
+}
+
+#princ-pant .fut-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .fut-container {
+    width: 85%;
+  }
+}
+
+#princ-pant .big-mobile {
+  position: relative;
+  width: 40%;
+  height: 75vh;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile {
+    display: none;
+  }
+}
+
+#princ-pant .big-mobile .buttons-container {
+  width: 330px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile .buttons-container {
+    width: 100%;
+  }
+}
+
+#princ-pant .big-mobile .big-mobile-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 330px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile .big-mobile-img {
+    width: 100%;
+  }
+}
+
+#princ-pant .big-mobile .big-a {
+  position: absolute;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#princ-pant .big-mobile .big-a:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+       -o-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#princ-pant .big-mobile .big-a .big-button {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 25px;
+}
+
+#princ-pant .big-mobile .big-a span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  color: #006199;
+  text-align: center;
+}
+
+#princ-pant .big-mobile #prest {
+  top: 190px;
+  left: 35px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #prest {
+    top: 24%;
+    left: 10%;
+    width: 22%;
+  }
+}
+
+#princ-pant .big-mobile #cards {
+  top: 220px;
+  left: 130px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #cards {
+    top: 28%;
+    left: 38%;
+    width: 22%;
+  }
+}
+
+#princ-pant .big-mobile #fondos {
+  top: 190px;
+  left: 225px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #fondos {
+    top: 24%;
+    left: 65%;
+    width: 22%;
+  }
+}
+
+#princ-pant .big-mobile #seguros {
+  top: 295px;
+  left: 35px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #seguros {
+    top: 36%;
+    left: 10%;
+    width: 22%;
+  }
+}
+
+#princ-pant .big-mobile #cuentas {
+  top: 325px;
+  left: 130px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #cuentas {
+    top: 41%;
+    left: 38%;
+    width: 22%;
+  }
+}
+
+#princ-pant .big-mobile #hipotecas {
+  top: 295px;
+  left: 225px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #hipotecas {
+    top: 36%;
+    left: 65%;
+    width: 22%;
+  }
+}
+
+#princ-pant .big-mobile #pensiones {
+  top: 410px;
+  left: 70px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #pensiones {
+    top: 48%;
+    left: 10%;
+    width: 22%;
+  }
+}
+
+#princ-pant .big-mobile #bolsa {
+  top: 410px;
+  left: 185px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .big-mobile #bolsa {
+    top: 48%;
+    left: 65%;
+    width: 22%;
+  }
+}
+
+#princ-pant .pant {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 35%;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .pant {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  #princ-pant .pant {
+    width: 100%;
+  }
+}
+
+#princ-pant .pant .pant-text {
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#princ-pant .pant .pant-text p {
+  font-size: 12pt;
+  line-height: 1.1em;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .pant .pant-text p {
+    font-size: 12pt;
+    line-height: 1.4em;
+  }
+}
+
+@media (max-width: 500px) {
+  #princ-pant .pant .pant-text p {
+    font-size: 10pt;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+}
+
+#princ-pant .pant .pant-text .pant-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  #princ-pant .pant .pant-text .pant-title {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#princ-pant .pant .pant-text .pant-title img {
+  width: 60px;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .pant .pant-text .pant-title img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  #princ-pant .pant .pant-text .pant-title img {
+    width: 35px;
+  }
+}
+
+#princ-pant .pant .pant-text .pant-title h2 {
+  margin-left: 15px;
+  width: 75%;
+  color: #006199;
+}
+
+@media (max-width: 768px) {
+  #princ-pant .pant .pant-text .pant-title h2 {
+    font-size: 14pt;
+  }
+}
+
+@media (max-width: 500px) {
+  #princ-pant .pant .pant-text .pant-title h2 {
+    font-size: 12pt;
+    width: auto;
+  }
+}
+
+#princ-pant .pant .changing-img {
+  margin: 0 auto;
+  width: 300px;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  #princ-pant .pant .changing-img {
+    width: auto;
+    height: 70vh;
+  }
+}
+
+#princ-pant .pant .cont {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  color: #006199;
+  font-weight: 600;
+}
+
+#princ-pant .pant .cont .cont-control {
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+       -o-transform: scale(1.1);
+          transform: scale(1.1);
+  padding: 0em 1em;
+}
+
+#fut-nav {
+  background: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  background-attachment: fixed;
+  padding: 4em;
+}
+
+@media (max-width: 500px) {
+  #fut-nav {
+    padding: 2em 0em;
+  }
+}
+
+#fut-nav .fut-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+}
+
+#fut-nav .mid-col {
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  #fut-nav .mid-col {
+    width: 49%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-nav .mid-col:nth-child(2) {
+    width: 55%;
+  }
+  #fut-nav .mid-col:nth-child(3) {
+    width: 43%;
+  }
+}
+
+#fut-nav .mid-col .text-col {
+  height: 60vh;
+}
+
+@media (max-width: 500px) {
+  #fut-nav .mid-col .text-col {
+    height: auto;
+    padding-bottom: 30vh;
+  }
+}
+
+#fut-nav .mid-col .text-col p {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+  #fut-nav .mid-col .text-col p {
+    font-size: 12pt;
+    line-height: 1.4em;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-nav .mid-col .text-col p {
+    font-size: 10pt;
+    margin-left: 0;
+    width: 95%;
+  }
+}
+
+#fut-nav .mid-col .text-col img {
+  height: 45px;
+  max-width: 150px;
+}
+
+@media (max-width: 500px) {
+  #fut-nav .mid-col .text-col img {
+    height: 30px;
+    margin: 0 auto;
+  }
+}
+
+#fut-nav .big-img-col {
+  position: relative;
+  height: 80vh;
+}
+
+#fut-nav .big-img-col img {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: translateX(50px);
+      -ms-transform: translateX(50px);
+       -o-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  #fut-nav .big-img-col img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-nav .big-img-col img {
+    height: 220px;
+  }
+}
+
+#fut-nav .big-img-col .fix-col {
+  position: fixed;
+  top: 10vh;
+  left: 10%;
+  right: 0;
+  margin: 0 auto;
+  width: 50%;
+  height: 60vh;
+}
+
+@media (max-width: 768px) {
+  #fut-nav .big-img-col .fix-col {
+    left: auto;
+    width: 40%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-nav .big-img-col .fix-col {
+    width: 30%;
+    right: 5%;
+    height: auto;
+  }
+}
+
+#fut-nav .big-img-col .bigImgCol-fine {
+  position: absolute;
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+       -o-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+#fut-nav .big-img-col .img-shadow {
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+}
+
+#fut-forms {
+  background: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  background-attachment: fixed;
+  padding: 4em;
+}
+
+@media (max-width: 500px) {
+  #fut-forms {
+    padding: 2em 0em;
+  }
+}
+
+#fut-forms .fut-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  max-width: 1200px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+#fut-forms .fut-container .big-image img {
+  width: 75%;
+}
+
+#fut-forms .fut-container .mid-col {
+  display: inline;
+  text-align: center;
+}
+
+#fut-forms .fut-container .mid-col:nth-child(2) {
+  width: 49%;
+}
+
+#fut-forms .fut-container .mid-col:nth-child(3) {
+  width: 49%;
+}
+
+@media (max-width: 768px) {
+  #fut-forms .fut-container .mid-col:nth-child(2) {
+    width: 40%;
+  }
+  #fut-forms .fut-container .mid-col:nth-child(3) {
+    width: 59%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-forms .fut-container .mid-col:nth-child(2) {
+    width: 30%;
+  }
+  #fut-forms .fut-container .mid-col:nth-child(3) {
+    width: 59%;
+  }
+}
+
+#fut-forms .fut-container .mid-col img {
+  width: 70%;
+}
+
+@media (max-width: 500px) {
+  #fut-forms .fut-container .mid-col img {
+    width: 90%;
+  }
+}
+
+#fut-forms .fut-container .mid-col p {
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  #fut-forms .fut-container .mid-col p {
+    font-size: 10pt;
+  }
+}
+
+#fut-forms .fut-container .mid-col .form-text-1,
+#fut-forms .fut-container .mid-col .form-text-2,
+#fut-forms .fut-container .mid-col .form-text-3 {
+  margin-top: 8em;
+}
+
+@media (max-width: 1024px) {
+  #fut-forms .fut-container .mid-col .form-text-1,
+  #fut-forms .fut-container .mid-col .form-text-2,
+  #fut-forms .fut-container .mid-col .form-text-3 {
+    margin-top: 5em;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-forms .fut-container .mid-col .form-text-1,
+  #fut-forms .fut-container .mid-col .form-text-2,
+  #fut-forms .fut-container .mid-col .form-text-3 {
+    margin-top: 2em;
+  }
+}
+
+#fut-responsive {
+  padding: 4em 0;
+}
+
+#fut-responsive .fut-title {
+  margin-bottom: 2em;
+}
+
+#fut-responsive .fut-container {
+  position: relative;
+  height: 180vh;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container {
+    height: 120vh;
+  }
+}
+
+#fut-responsive .fut-container p {
+  font-size: 16pt;
+  font-weight: 600;
+  line-height: 1.5em;
+  width: 45%;
+  color: #006199;
+  position: absolute;
+}
+
+@media (max-width: 1024px) {
+  #fut-responsive .fut-container p {
+    width: 60%;
+    font-size: 14pt;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container p {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container p {
+    font-size: 10pt;
+    width: 80%;
+  }
+}
+
+#fut-responsive .fut-container .res-img {
+  position: absolute;
+  -webkit-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+#fut-responsive .fut-container p:first-child {
+  top: 0;
+  left: 50%;
+}
+
+@media (max-width: 1024px) {
+  #fut-responsive .fut-container p:first-child {
+    left: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container p:first-child {
+    left: 20%;
+  }
+}
+
+#fut-responsive .fut-container .res-p {
+  top: 50vh;
+  left: 0%;
+  z-index: 3;
+}
+
+@media (max-width: 1024px) {
+  #fut-responsive .fut-container .res-p {
+    top: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container .res-p {
+    top: 40vh;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container .res-p {
+    top: 60vh;
+  }
+}
+
+#fut-responsive .fut-container .res-img:nth-child(2) {
+  width: 12.5%;
+  top: -25vh;
+  left: 30%;
+}
+
+@media (max-width: 1024px) {
+  #fut-responsive .fut-container .res-img:nth-child(2) {
+    left: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container .res-img:nth-child(2) {
+    left: 10%;
+    width: 14%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container .res-img:nth-child(2) {
+    left: 0%;
+    width: 14%;
+  }
+}
+
+#fut-responsive .fut-container .res-img:nth-child(3) {
+  width: 18%;
+  top: 55vh;
+  left: 45%;
+}
+
+@media (max-width: 1024px) {
+  #fut-responsive .fut-container .res-img:nth-child(3) {
+    top: 70vh;
+    left: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container .res-img:nth-child(3) {
+    top: 50vh;
+    left: 40%;
+    width: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container .res-img:nth-child(3) {
+    left: 35%;
+    top: 60vh;
+  }
+}
+
+#fut-responsive .fut-container .res-img:nth-child(4) {
+  width: 30%;
+  top: 75vh;
+  left: 60%;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  #fut-responsive .fut-container .res-img:nth-child(4) {
+    left: 70%;
+    top: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container .res-img:nth-child(4) {
+    top: 60vh;
+    left: 70%;
+    width: 35%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container .res-img:nth-child(4) {
+    top: 70vh;
+    left: 75%;
+  }
+}
+
+#fut-responsive .fut-container .res-img:nth-child(6) {
+  width: 16%;
+  top: 40vh;
+  left: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container .res-img:nth-child(6) {
+    top: 18vh;
+    left: 55%;
+    width: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container .res-img:nth-child(6) {
+    top: 35vh;
+    left: 70%;
+    width: 20%;
+  }
+}
+
+#fut-responsive .fut-container .res-img:nth-child(7) {
+  width: 22%;
+  top: 140vh;
+  left: 30%;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  #fut-responsive .fut-container .res-img:nth-child(7) {
+    top: 155vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container .res-img:nth-child(7) {
+    top: 120vh;
+    left: 30%;
+    width: 28%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container .res-img:nth-child(7) {
+    top: 140vh;
+    left: 35%;
+  }
+}
+
+#fut-responsive .fut-container .res-img:nth-child(8) {
+  width: 40%;
+  margin: 55vh 0% 0% 0%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #fut-responsive .fut-container .res-img:nth-child(8) {
+    margin: 0;
+    top: 30vh;
+    left: 0%;
+    width: 42%;
+  }
+}
+
+@media (max-width: 500px) {
+  #fut-responsive .fut-container .res-img:nth-child(8) {
+    margin: 0;
+    top: 50vh;
+    left: 0%;
+    width: 42%;
+  }
+}
+
+#fut-footer {
+  background: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  -webkit-box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  padding: 2em 0 6em;
+}
+
+#fut-footer .fut-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 200px;
+}
+
+#fut-footer .fut-container p,
+#fut-footer .fut-container h3 {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  text-align: center;
+  color: #003858;
+  font-size: 12pt;
+}
+
+#fut-footer .fut-container h3 {
+  font-size: 14pt;
+}
+
+#fut-footer .fut-container .figure a .figure-ux {
+  width: 200px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 20px;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#fut-footer .fut-container .figure a .figure-ux:hover {
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+       -o-transform: scale(0.99);
+          transform: scale(0.99);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  margin: 25px 20px 15px 20px;
+}
+/*# sourceMappingURL=futuro.css.map */

@@ -1,0 +1,1208 @@
+
+// * {
+//     border: 1px solid #ccc;
+// }
+
+.marcador {
+    width: 100%;
+    height: 3px;
+    background: black;
+    position: fixed;
+    left: 0;
+    // top: 52%;
+    z-index: 50;
+}
+
+.marcador2 {
+    width: 100%;
+    height: 3px;
+    background: red;
+    position: fixed;
+    left: 0;
+    // top: 50%;
+    z-index: 50;
+}
+
+// COLORES
+$futBlue: #006199;
+$futDarkBlue: #003858;
+$futGray: #565656;
+
+// VARIABLES
+$futFondo: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+
+// FUENTES
+@font-face {
+    font-family: "Aller regular";
+    src: url("../../fonts/fonts/Aller_Rg.ttf");
+}
+
+@font-face {
+    font-family: "Aller display";
+    src: url("../../fonts/Aller_Bd.ttf");
+
+}
+
+// COMPONENTES
+.fut-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1.fut-title {
+    width: 100%;
+    text-align: center;
+    color: $futBlue;
+    font-family: "Aller Display";
+    letter-spacing: 0.5px;
+
+    @media (max-width: 768px) {
+        font-size: 16pt;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 14pt;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+}
+
+// h1,
+// h2,
+// h3,
+// h4 {
+//     font-family: "Aller Display";
+//     letter-spacing: 0.5px;
+// }
+
+// p,
+// span,
+// a {
+//     font-family: "Aller regular";
+//     letter-spacing: 0.5px;
+//     font-size: 14pt;
+//     color: $futDarkBlue;
+// }
+
+// Secciones
+
+// PORTADA
+#fut-port {
+    position: relative;
+    background: $futFondo;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 768px) {
+
+        height: 60vh;
+    }
+
+    .invite-scroll {
+        z-index: 12;
+    }
+
+    .fut-container {
+        height: 100%;
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: all 1s ease-out;
+
+            &:nth-child(1) {
+                transform: translateX(10%);
+            }
+
+            &:nth-child(2) {
+                transform: translateY(-20%);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-20%);
+            }
+
+            &:nth-child(4) {
+                transform: translateY(-20%);
+            }
+
+            &:nth-child(5) {
+                transform: translateY(-20%);
+            }
+
+            &:nth-child(6) {
+                transform: translateY(-20%);
+            }
+
+            &:nth-child(7) {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// INTRODUCCIÓN
+#fut-intro {
+    height: auto;
+    padding: 4em 0;
+
+    @media (max-width: 500px) {
+        padding: 2em 0;
+    }
+
+    .fut-container {
+        width: 90%;
+    }
+
+    .fut-p-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 500px) {
+            padding: 20px 10px;
+        }
+
+        p {
+            font-size: 14pt;
+            color: $futGray;
+            width: 30%;
+
+            @media (max-width: 1024px) {
+                width: 45%;
+                margin: 40px 0;
+            }
+
+            @media (max-width: 500px) {
+                width: 100%;
+                font-size: 10pt;
+                line-height: 1.4em;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .fut-intro-img {
+        width: 100%;
+        height: 200px;
+        margin: 100px 0;
+        position: relative;
+        background: $futFondo;
+        background-size: 100% 100%;
+
+        // @media (max-width: 500px) {
+        //     width: 80%;
+        // }
+
+        img {
+            position: absolute;
+            height: 500px;
+            top: -150px;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            @media (max-width: 1024px) {
+                top: -100px;
+                height: 400px;
+            }
+
+            @media (max-width: 768px) {
+                top: -100px;
+                height: 400px;
+            }
+
+            @media (max-width: 500px) {
+                top: -50px;
+                height: auto;
+                width: 40%;
+            }
+        }
+
+        .sp-mobile-apear {
+            transition: all 1s ease-out;
+        }
+
+        .mob-rotate-1 {
+            transform: rotate(0deg);
+        }
+
+        .mob-rotate-2 {
+            transform: rotate(-15deg);
+        }
+
+        .mob-rotate-3 {
+            transform: rotate(-30deg);
+        }
+
+        .mob-rotate-4 {
+            transform: rotate(-45deg);
+        }
+
+        .mob-rotate-5 {
+            transform: rotate(-60deg);
+        }
+
+        .mob-rotate-6 {
+            transform: rotate(-75deg);
+        }
+
+        .mob-rotate-7 {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+// INICIO APP
+
+#app-start {
+    background: $futFondo;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 4em;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        padding: 4em 0;
+    }
+
+    @media (max-width: 500px) {
+        padding: 2em 0;
+    }
+
+    .fut-container {
+        @media (max-width: 768px) {
+            width: 95%;
+        }
+    }
+
+    .fases-start {
+        display: flex;
+        justify-content: center;
+
+
+        .sp-img {
+            position: relative;
+            width: 40%;
+            height: 45vh;
+
+            @media (max-width: 768px) {
+                width: 48%;
+            }
+
+            @media (max-width: 500px) {
+                width: 30%;
+            }
+
+            img {
+                position: fixed;
+                height: 40vh;
+                margin: auto;
+                left: -25%;
+                right: 0;
+                transition: all 0.5s ease-out;
+                opacity: 0;
+                transform: translate(0px, 200px);
+
+                @media (max-width: 500px) {
+                    width: 25%;
+                    height: auto;
+                }
+            }
+
+            .imgPos1,
+            .imgPos2,
+            .imgPos3 {
+                opacity: 1;
+                top: 5vh;
+                left: -45%;
+
+                @media (max-width: 1024px) {
+                    left: -50%;
+                    top: 10vh;
+                }
+
+                @media (max-width: 500px) {
+                    left: 10%;
+                    right: auto;
+                }
+            }
+
+            .imgPos1 {
+                transform: translate(0px, 40px);
+
+                @media (max-width: 500px) {
+                    transform: translate(0px, 10px);
+                }
+            }
+
+            .imgPos2 {
+                transform: translate(-20px, 20px);
+
+                @media (max-width: 500px) {
+                    transform: translate(-10px, 0px);
+                }
+            }
+
+            .imgPos3 {
+                transform: translate(-40px, 0px);
+
+                @media (max-width: 500px) {
+                    transform: translate(-20px, -10px);
+                }
+            }
+        }
+
+        .icon-text {
+            display: flex;
+            align-items: flex-start;
+            width: 60%;
+            height: 60vh;
+
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+
+            @media (max-width: 500px) {
+                width: 60%;
+                margin-left: 10%;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            img {
+                display: flex;
+                width: 50px;
+
+                @media (max-width: 768px) {
+                    width: 35px;
+                    margin-top: 20px;
+                }
+
+                @media (max-width: 500px) {
+                    margin: 0 auto;
+                    width: 30px;
+                }
+            }
+
+            div {
+                padding-left: 30px;
+
+                @media (max-width: 768px) {
+                    padding-left: 10px;
+                }
+
+                h2 {
+                    font-size: 15pt;
+                    color: $futBlue;
+                    font-weight: 800;
+
+                    @media (max-width: 768px) {
+                        font-size: 12pt;
+                    }
+
+                    @media (max-width: 500px) {
+                        font-size: 11pt;
+                    }
+                }
+
+                p {
+                    font-size: 12pt;
+                    line-height: 16pt;
+
+                    @media (max-width: 500px) {
+                        font-size: 10pt;
+                        line-height: 14pt;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PANTALLAS PRINCIPALES
+#princ-pant {
+    position: relative;
+    background: white;
+    padding: 4em 0;
+
+    @media (max-width: 768px) {
+        padding: 2em 0;
+    }
+
+    h1 {
+        margin-bottom: 2em;
+    }
+
+    .fut-container {
+        display: flex;
+        justify-content: space-evenly;
+        display: flex;
+
+        @media (max-width: 768px) {
+            width: 85%;
+        }
+    }
+
+    // Gran mobile y botones
+    .big-mobile {
+        position: relative;
+        width: 40%;
+        height: 75vh;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        .buttons-container {
+            width: 330px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        .big-mobile-img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 330px;
+
+            // height: 100%;
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        .big-a {
+            position: absolute;
+            z-index: 2;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            .big-button {
+                width: 50px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: 25px;
+                ;
+            }
+
+            span {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                font-size: 12px;
+                font-weight: 600;
+                color: $futBlue;
+                text-align: center;
+            }
+        }
+
+
+
+        #prest {
+            top: 190px;
+            left: 35px;
+
+            @media (max-width: 768px) {
+                top: 24%;
+                left: 10%;
+                width: 22%;
+            }
+        }
+
+        #cards {
+            top: 220px;
+            left: 130px;
+
+            @media (max-width: 768px) {
+                top: 28%;
+                left: 38%;
+                width: 22%;
+            }
+        }
+
+        #fondos {
+            top: 190px;
+            left: 225px;
+
+            @media (max-width: 768px) {
+                top: 24%;
+                left: 65%;
+                width: 22%;
+            }
+        }
+
+        #seguros {
+            top: 295px;
+            left: 35px;
+
+            @media (max-width: 768px) {
+                top: 36%;
+                left: 10%;
+                width: 22%;
+            }
+        }
+
+        #cuentas {
+            top: 325px;
+            left: 130px;
+
+            @media (max-width: 768px) {
+                top: 41%;
+                left: 38%;
+                width: 22%;
+            }
+        }
+
+        #hipotecas {
+            top: 295px;
+            left: 225px;
+
+            @media (max-width: 768px) {
+                top: 36%;
+                left: 65%;
+                width: 22%;
+            }
+        }
+
+        #pensiones {
+            top: 410px;
+            left: 70px;
+
+            @media (max-width: 768px) {
+                top: 48%;
+                left: 10%;
+                width: 22%;
+            }
+        }
+
+        #bolsa {
+            top: 410px;
+            left: 185px;
+
+            @media (max-width: 768px) {
+                top: 48%;
+                left: 65%;
+                width: 22%;
+            }
+        }
+
+
+    }
+
+    // Pantallas
+    .pant {
+        display: flex;
+        flex-wrap: wrap;
+        width: 35%;
+
+        @media (max-width: 768px) {
+            width: 50%;
+        }
+
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+
+        .pant-text {
+            p {
+                font-size: 12pt;
+                line-height: 1.1em;
+
+                @media (max-width: 768px) {
+                    font-size: 12pt;
+                    line-height: 1.4em;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 10pt;
+                    text-align: center;
+                    padding-bottom: 1em;
+                }
+            }
+
+            height: auto;
+            padding: 0;
+            margin: 0;
+
+
+            .pant-title {
+                display: flex;
+
+                @media (max-width: 500px) {
+                    justify-content: center;
+                }
+
+                img {
+                    width: 60px;
+
+                    @media (max-width: 768px) {
+                        width: 50px;
+                    }
+
+                    @media (max-width: 500px) {
+                        width: 35px;
+                    }
+                }
+
+                h2 {
+                    margin-left: 15px;
+                    width: 75%;
+                    color: $futBlue;
+
+                    @media (max-width: 768px) {
+                        font-size: 14pt;
+                    }
+
+                    @media (max-width: 500px) {
+                        font-size: 12pt;
+                        width: auto;
+                    }
+
+                }
+
+
+            }
+
+        }
+
+        .changing-img {
+            margin: 0 auto;
+            width: 300px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+            @media (max-width: 768px) {
+                width: auto;
+                height: 70vh;
+            }
+        }
+
+        .cont {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            height: 20px;
+            color: $futBlue;
+            font-weight: 600;
+
+            .cont-control {
+                cursor: pointer;
+                transition: all 0.2s;
+                transform: scale(1.1);
+                padding: 0em 1em;
+            }
+        }
+    }
+
+}
+
+// NAVEGACIÓN SENCILLA Y FLUIDA
+
+#fut-nav {
+    background: $futFondo;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 4em;
+
+    @media (max-width: 500px) {
+        padding: 2em 0em;
+    }
+
+    .fut-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .mid-col {
+        width: 40%;
+
+        @media (max-width: 768px) {
+            width: 49%;
+        }
+
+        @media (max-width: 500px) {
+            &:nth-child(2) {
+                width: 55%;
+            }
+
+            &:nth-child(3) {
+                width: 43%;
+            }
+        }
+
+        .text-col {
+            height: 60vh;
+
+            @media (max-width: 500px) {
+                height: auto;
+                padding-bottom: 30vh;
+            }
+
+            p {
+                width: 80%;
+                margin-top: 20px;
+                margin-left: 10%;
+
+                @media (max-width: 768px) {
+                    font-size: 12pt;
+                    line-height: 1.4em;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 10pt;
+                    margin-left: 0;
+                    width: 95%;
+                }
+
+            }
+
+            img {
+                height: 45px;
+                max-width: 150px;
+
+                @media (max-width: 500px) {
+                    height: 30px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+
+    .big-img-col {
+        position: relative;
+        height: 80vh;
+
+        img {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease-out;
+
+            @media (max-width: 768px) {
+                height: 500px;
+            }
+
+            @media (max-width: 500px) {
+                height: 220px;
+            }
+        }
+
+        .fix-col {
+            position: fixed;
+            top: 10vh;
+            left: 10%;
+            right: 0;
+            margin: 0 auto;
+            width: 50%;
+            height: 60vh;
+
+            @media (max-width: 768px) {
+                left: auto;
+                width: 40%;
+                right: 10%;
+            }
+
+            @media (max-width: 500px) {
+                width: 30%;
+                right: 5%;
+                height: auto;
+            }
+        }
+
+        .bigImgCol-fine {
+            position: absolute;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        .img-shadow {
+            filter: brightness(0.4);
+        }
+
+    }
+}
+
+// FORMULARIOS DINÁMICOS Y ENTRETENIDOS
+
+#fut-forms {
+    background: $futFondo;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 4em;
+
+    @media (max-width: 500px) {
+        padding: 2em 0em;
+    }
+
+    .fut-container {
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        max-width: 1200px;
+        flex-wrap: wrap;
+
+        .big-image img {
+            width: 75%;
+        }
+
+        .mid-col {
+            &:nth-child(2) {
+                width: 49%;
+            }
+
+            &:nth-child(3) {
+                width: 49%;
+            }
+
+            @media (max-width: 768px) {
+                &:nth-child(2) {
+                    width: 40%;
+                }
+
+                &:nth-child(3) {
+                    width: 59%;
+                }
+            }
+
+            @media (max-width: 500px) {
+                &:nth-child(2) {
+                    width: 30%;
+                }
+
+                &:nth-child(3) {
+                    width: 59%;
+                }
+            }
+
+            img {
+                width: 70%;
+
+                @media (max-width: 500px) {
+                    width: 90%;
+                }
+            }
+
+
+            display: inline;
+            text-align: center;
+
+            p {
+                text-align: left;
+
+                @media (max-width: 500px) {
+                    font-size: 10pt;
+                }
+            }
+
+            .form-text-1,
+            .form-text-2,
+            .form-text-3 {
+                margin-top: 8em;
+
+                @media (max-width: 1024px) {
+                    margin-top: 5em;
+                }
+
+                @media (max-width: 768px) {
+                    margin-top: 2em;
+                }
+            }
+
+        }
+    }
+}
+
+
+// DISEÑO PARA TODOS LOS DISPOSITIVOS
+
+#fut-responsive {
+    padding: 4em 0;
+
+    .fut-title {
+        margin-bottom: 2em;
+    }
+
+    .fut-container {
+        position: relative;
+        height: 180vh;
+        width: 90%;
+
+        @media (max-width: 768px) {
+            height: 120vh;
+        }
+
+        p {
+            font-size: 16pt;
+            font-weight: 600;
+            line-height: 1.5em;
+            width: 45%;
+            color: $futBlue;
+            position: absolute;
+
+            @media (max-width: 1024px) {
+                width: 60%;
+                font-size: 14pt;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 12pt;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 10pt;
+                width: 80%;
+            }
+
+        }
+
+        .res-img {
+            position: absolute;
+            transition: all 2s ease-out;
+        }
+
+        p:first-child {
+            top: 0;
+            left: 50%;
+
+            @media (max-width: 1024px) {
+                left: 40%;
+            }
+
+            @media (max-width: 500px) {
+                left: 20%;
+            }
+        }
+
+        .res-p {
+            top: 50vh;
+            left: 0%;
+            z-index: 3;
+
+            @media (max-width: 1024px) {
+                top: 60vh;
+            }
+
+            @media (max-width: 768px) {
+                top: 40vh;
+            }
+
+            @media (max-width: 500px) {
+                top: 60vh;
+            }
+        }
+
+        .res-img:nth-child(2) {
+            // movil-tarjetas
+            width: 12.5%;
+            top: -25vh;
+            left: 30%;
+
+            @media (max-width: 1024px) {
+                left: 20%;
+            }
+
+            @media (max-width: 768px) {
+                left: 10%;
+                width: 14%;
+            }
+
+            @media (max-width: 500px) {
+                left: 0%;
+                width: 14%;
+            }
+
+        }
+
+        .res-img:nth-child(3) {
+            // movil-menu
+            width: 18%;
+            top: 55vh;
+            left: 45%;
+
+            @media (max-width: 1024px) {
+                top: 70vh;
+                left: 50%;
+            }
+
+            @media (max-width: 768px) {
+                top: 50vh;
+                left: 40%;
+                width: 20%;
+            }
+
+            @media (max-width: 500px) {
+                left: 35%;
+                top: 60vh;
+            }
+        }
+
+        .res-img:nth-child(4) {
+            // Ipad
+            width: 30%;
+            top: 75vh;
+            left: 60%;
+            z-index: 2;
+
+            @media (max-width: 1024px) {
+                left: 70%;
+                top: 80vh;
+            }
+
+            @media (max-width: 768px) {
+                top: 60vh;
+                left: 70%;
+                width: 35%;
+            }
+
+            @media (max-width: 500px) {
+                top: 70vh;
+                left: 75%;
+            }
+        }
+
+        .res-img:nth-child(6) {
+            // movil-inicio
+            width: 16%;
+            top: 40vh;
+            left: 50%;
+            z-index: 1;
+
+            @media (max-width: 768px) {
+                top: 18vh;
+                left: 55%;
+                width: 20%;
+            }
+
+            @media (max-width: 500px) {
+                top: 35vh;
+                left: 70%;
+                width: 20%;
+            }
+        }
+
+        .res-img:nth-child(7) {
+            // movil-caras
+            width: 22%;
+            top: 140vh;
+            left: 30%;
+            z-index: 1;
+
+            @media (max-width: 1024px) {
+                top: 155vh;
+            }
+
+            @media (max-width: 768px) {
+                top: 120vh;
+                left: 30%;
+                width: 28%;
+            }
+
+            @media (max-width: 500px) {
+                top: 140vh;
+                left: 35%;
+            }
+        }
+
+        .res-img:nth-child(8) {
+            // movil-caras
+            width: 40%;
+            margin: 55vh 0% 0% 0%;
+            z-index: 1;
+
+            @media (max-width: 768px) {
+                margin: 0;
+                top: 30vh;
+                left: 0%;
+                width: 42%;
+            }
+
+            @media (max-width: 500px) {
+                margin: 0;
+                top: 50vh;
+                left: 0%;
+                width: 42%;
+            }
+        }
+
+    }
+
+}
+
+// FOOTER FUTURO
+#fut-footer {
+    background: $futFondo;
+    background-size: cover;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    padding: 2em 0 6em;
+
+    .fut-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 200px;
+
+        p,
+        h3 {
+            flex-basis: 100%;
+            text-align: center;
+            color: $futDarkBlue;
+            font-size: 12pt;
+        }
+
+        h3 {
+            font-size: 14pt;
+        }
+
+        .figure a .figure-ux {
+            width: 200px;
+            transform: scale(1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin: 20px;
+            transition: all 0.4s ease-out;
+
+            &:hover {
+                transform: scale(0.99);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+                margin: 25px 20px 15px 20px;
+            }
+        }
+    }
+}
+
+// fin NADIRA FOOTER

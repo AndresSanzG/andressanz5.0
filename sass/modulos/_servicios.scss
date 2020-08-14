@@ -1,0 +1,118 @@
+
+// SERVICIOS
+
+#servicios-box{
+	@include mauto;
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+
+	.servicio{
+		flex-basis: 30%;
+		text-align: center;
+
+		img{ max-height: 120px; }
+		h4{ font-weight: $bold; font-size: 1em;}
+		h5{ font-weight: $regular; font-size: 0.75em;}
+		p{ color: $gris; font-size: 0.8em; line-height: 1.5em; }
+	}
+}
+
+#herramientas-section{
+	background: url('../../img/basic/fondos/fondo-herramientas.svg') no-repeat;
+	background-size: 100% 100%;
+	padding: 7em 0; 
+}
+
+#herramientas-box{
+	@include mauto;
+	
+
+	.herramientas{		
+		display: flex;
+		flex-wrap: wrap; 
+		justify-content: space-between;
+		text-align: center;
+
+		h4{ 
+			display: block; width: 100%; 
+			color: $gris; font-size: 0.9em;
+		}
+		.herramienta{
+			position: relative;
+			flex-basis: 18%;	
+			cursor: default;	
+
+			img{ transition: all 1s cubic-bezier(.18,1.21,.76,1.1); }
+
+			.info-oculta{
+				position: absolute;
+				@include mauto;
+				opacity: 0;
+				font-size: 0.8em;	
+				transition: all 0.5s ease-in-out;	
+			
+				p{ 
+					color: $gris-dark;
+					font-weight: $bold; 
+					transition: all 0.5s ease-in-out;
+					margin-bottom: 0;
+				}		
+				p:last-child{ 
+					color: $gris;
+					font-weight: $regular; }	
+			}
+		}
+	}
+
+			.p-top{transform: translateY(-2em) ;}
+			.p-bot{transform: translateY(2em) ;}
+			.img-min{transform: scale(0); opacity: 0}
+}
+
+@media (max-width: 1100px) {
+		.titular{ width: 90%; }
+
+		#servicios-box{
+			.servicio{ flex-basis: 48%; }
+		}
+		#herramientas-box{
+			width: 90%;
+		}
+}
+@media (max-width: 768px) {
+	.titular{
+		width: 90%;
+		h2{ font-size: 14pt; }
+		h3{ font-size: 12pt; }
+	}
+	#servicios-box{
+			.servicio{ flex-basis: 100%; }
+	}
+	#herramientas-section{
+		padding: 3em 1em;
+	}
+	#herramientas-box{
+		width: 90%;
+		.mt8{ margin-top: 40px !important; }
+		.herramientas{
+			
+				.herramienta{
+						flex-basis: 100%;
+						margin-bottom: 2em;
+						.info-oculta{
+							display: flex;
+    						flex-wrap: wrap;
+    						p{
+    							flex-basis: 100%;
+    							margin: auto; 
+    							align-items: center;
+    							&:first-child{margin-bottom: 0.25em;}
+    							&:last-child{margin-top: 0.25em;}
+    						}
+						}
+				}
+				justify-content: space-around;
+		}
+	}
+}

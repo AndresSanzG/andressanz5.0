@@ -1,0 +1,423 @@
+
+
+// CONTACTO
+#contacto {
+    margin-top: 65px;
+    padding: 6em 0;
+    background: url('../../img/basic/fondos/fondo-contacto.svg') no-repeat;
+    background-size: 100% 100%;
+
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        @include mauto;
+        max-width: 1200px;
+        width: 90%;
+    }
+
+    // FORMULARIO
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        position: relative;
+        width: 60%;
+
+        p {
+            flex-basis: 100%;
+            font-size: 12pt;
+            color: $gris;
+            margin: 0em 0 0.5em;
+        }
+
+        input,
+        textarea {
+            border: none;
+            box-shadow: $sombra-menu;
+            background: #f2f2f2;
+            border-radius: $radius2;
+            padding: 1em;
+            font-size: 10pt;
+            color: black;
+            margin-bottom: 1em;
+        }
+
+        .sp-input label,
+        .sp-textarea label {
+            position: absolute;
+            z-index: 2;
+            font-size: 10pt;
+            height: 10pt;
+            margin-top: 20px;
+            margin-left: 10pt;
+            color: #757575;
+            transition: all 0.2s ease-out;
+            pointer-events: none;
+        }
+
+
+        .act-label {
+            margin-top: 8pt !important;
+            font-size: 8pt !important;
+            height: 8pt !important;
+        }
+
+        .act-input {
+            padding: 1.5em 1em 0.5em;
+            border: 2px solid rgb(185, 185, 185) !important;
+        }
+
+
+
+        .box-input1 {
+            flex-basis: 49%;
+            margin-top: 2em;
+        }
+
+        .box-input2 {
+            flex-basis: 100%;
+        }
+
+        input {
+            height: 40pt;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+
+            @include mauto;
+            margin-top: 1em;
+            border: none;
+            padding: 1em 3em;
+            border-radius: 2em;
+
+            @include deg-naranja;
+            text-transform: uppercase;
+            color: white;
+            font-size: 12pt;
+            letter-spacing: 0.5px;
+            font-weight: $medium;
+
+            cursor: pointer;
+            transition: $rapida;
+
+            &:focus {
+                outline-style: none;
+            }
+
+            &:hover {
+                @include deg-naranja-dark;
+                // color: $naranja-dark;	
+                font-weight: $bold;
+                box-shadow: $sombra-inset;
+
+            }
+
+        }
+    }
+
+    .datos-contacto-box {
+        position: relative;
+        width: 40%;
+
+        ul {
+            padding-left: 3em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+
+            &:hover {
+                font-weight: $medium;
+
+                &:nth-child(1) p {
+                    color: $azul;
+                }
+
+                &:nth-child(2) p {
+                    color: $verde;
+                }
+
+                &:nth-child(3) p {
+                    color: $magenta;
+                }
+
+                &:nth-child(4) p {
+                    color: $cyan;
+                }
+
+                &:nth-child(5) p {
+                    color: $naranja;
+                }
+
+                &:nth-child(6) p {
+                    color: $morado;
+                }
+
+                img {
+                    transform: scale(0.9)
+                }
+            }
+        }
+
+        a {
+            display: flex;
+            color: $gris;
+
+            p {
+                padding-left: 15px;
+                width: 85%;
+                font-size: 12pt;
+                transition: $normal;
+            }
+
+            img {
+                width: 50px !important;
+                transition: $normal-cubic;
+            }
+        }
+    }
+}
+
+// Modal de elección de cv
+.cv-shadow {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#cv-modal {
+    display: none;
+    position: fixed;
+    z-index: 222;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    max-width: 700px;
+    height: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media (max-width: 500px) {
+        height: 300px;
+    }
+
+    .close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        transition: all 0.4s ease-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 500px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    h2 {
+        margin: 2em auto;
+        width: 80%;
+        font-size: 14pt;
+        font-weight: 500;
+        color: $gris-dark;
+
+        @media (max-width: 500px) {
+            font-size: 10pt;
+            width: 75%;
+            transform: translateX(-5%);
+        }
+    }
+
+    // .cv-table{border: 1px solid #ccc;}
+    // .cv-vert{border: 1px solid red;}
+
+
+    .cv-table,
+    .cv-vert,
+    .cv-hor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cv-table {
+        margin: 2em auto;
+        width: 80%;
+        height: auto;
+        display: flex;
+        align-items: strech;
+
+        @media (max-width: 500px) {
+            font-size: 9pt;
+            width: 90%;
+        }
+
+        .cv-vert {
+            width: 32%;
+            height: 99%;
+            // border: 1px solid #ccc;
+        }
+
+        .cv-hor {
+            width: 100%;
+            align-items: center;
+            // border: 1px solid #ccc;
+
+            &:nth-child(1){height: 40px;}
+            &:nth-child(2){height: 60px;}
+            &:nth-child(3){height: 60px;}
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-bottom: 0px solid transparent;
+            }
+
+            .cv-button {
+                width: 95%;
+                // height: 60%;
+                padding: 10px 5px;
+                box-sizing: border-box;
+                border-radius: 10px;
+                color: white;
+                font-weight: 600;
+                text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+                transition: all 0.4s ease-out;
+
+                &:hover {
+                    transform: scale(0.98);
+                    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+        .empty{border: 1px solid transparent;}
+        .cv-tit-left{padding-right: 10px;}
+
+        .cv-vert:nth-child(2) .cv-hor:nth-child(2) .cv-button {
+            background: $verde;
+        }
+
+        .cv-vert:nth-child(2) .cv-hor:nth-child(3) .cv-button {
+            background: $verde-dark;
+        }
+
+        .cv-vert:nth-child(3) .cv-hor:nth-child(2) .cv-button {
+            background: $azul;
+        }
+
+        .cv-vert:nth-child(3) .cv-hor:nth-child(3) .cv-button {
+            background: $azul-dark;
+        }
+
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 1200px) {
+    #contacto {
+        form {
+            width: 50%;
+
+            p {
+                font-size: 11pt;
+            }
+
+            input[type="text"],
+            input[type="email"] {
+                flex-basis: 100%
+            }
+
+            input[type="email"] {
+                margin-top: 0;
+            }
+        }
+
+        .datos-contacto-box {
+            width: 50%;
+
+            ul {
+                padding-left: 0.5em;
+
+                li a img {
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #contacto {
+        .contact-container {
+            flex-wrap: wrap;
+
+            form {
+                width: 100%;
+
+                p {
+                    font-size: 10pt;
+                }
+            }
+
+            .datos-contacto-box {
+                width: 100%;
+                margin-top: 2em;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #contacto {
+        .contact-container {
+            flex-wrap: wrap;
+
+            form {
+                p:nth-child(2) {
+                    margin-bottom: 2em;
+                }
+
+                .box-input1 {
+                    margin-top: 0;
+                }
+
+                .box-input1,
+                .box-input2 {
+                    flex-basis: 100%;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,1579 @@
+// NADIRA
+$nad-azul-dark: #1e3662;
+$nad-azul: #18559b;
+$nad-azul-light: #2582c4;
+
+$nad-gris-dark: #707070;
+$nad-gris: #9f9f9f;
+$nad-gris-light: #f6f6f6;
+
+
+// VARIABLES
+// $nadFondo: ;
+
+
+// TITULOS
+.nad-title1,
+.nad-title2,
+.nad-title3 {
+  h1 {
+    color: $nad-azul-dark;
+    font-size: 30pt;
+
+    @media (max-width: 1024px) {
+      font-size: 20pt;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18pt;
+    }
+  }
+
+}
+
+.nad-title1,
+.nad-title3 {
+  h1 {
+    text-align: left;
+  }
+
+  img {
+    width: 100px;
+    display: block;
+  }
+}
+
+.nad-title2 {
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+      width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      width: 250px;
+    }
+  }
+}
+
+// PORTADA
+#nad-port {
+  position: relative;
+  background: url("../../img/basic/portfolio/06-ux/003-nadira/1.jpg") no-repeat;
+  // background: url("../../img/basic/portfolio/06-ux/001-futuro/portada/port-0.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  .invite-scroll {
+    z-index: 5;
+  }
+
+  @media (max-width: 1024px) {
+    height: 70vh;
+
+    .invite-scroll {
+      bottom: 2vh;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+
+    .invite-scroll {
+      bottom: 0%;
+    }
+  }
+
+  .nad-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    height: auto;
+
+    @media (max-width: 1024px) {
+      padding-top: 7.5vh;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 2.5vh;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      transition: 0.75s ease-out;
+
+      opacity: 0;
+      transform: scale(5);
+
+      @media (max-width: 1024px) {
+        width: 110%;
+        left: -2.5%;
+      }
+    }
+  }
+}
+
+
+// INTRODUCCIÓN
+#nad-intro {
+  background: $nad-gris-light;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+  .nad-intro-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .col-6 {
+      position: relative;
+      flex-basis: 40%;
+      height: min-content;
+
+      @media (max-width: 1024px) {
+        flex-basis: 48%;
+      }
+
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+      }
+
+      p {
+        font-size: 12pt;
+      }
+
+      .intro-img {
+        position: relative;
+
+        img {
+          position: relative;
+          width: 90%;
+          z-index: 2
+        }
+
+        .intro-img1 {
+          margin-left: 10%;
+        }
+
+        span {
+          position: absolute;
+          content: ' ';
+          z-index: 1;
+          width: 88%;
+          height: 95%;
+          border: 5px solid $nad-azul;
+        }
+
+        .span1 {
+          top: 8%;
+          left: 4%;
+        }
+
+        .span2 {
+          top: -8%;
+          left: 5%;
+        }
+      }
+    }
+
+    .nad-intro-1 {
+      margin-top: 5em;
+
+      @media (max-width: 1024px) {
+        margin-top: 2.5em;
+      }
+    }
+
+    .nad-intro-2 {
+      margin-top: 5em;
+
+      @media (max-width: 1024px) {
+        margin-top: 2em;
+      }
+    }
+
+    .nad-intro-3 {
+      margin-top: 5em;
+      margin-bottom: 5em;
+
+      @media (max-width: 1024px) {
+        margin-top: 4em;
+      }
+
+      @media (max-width: 768px) {
+        order: 4;
+        margin: 2em 0 4em;
+      }
+    }
+
+    .nad-intro-4 {
+      margin-top: 7.5em;
+
+      @media (max-width: 1024px) {
+        margin-top: 2.5em;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 2.5em;
+      }
+    }
+  }
+}
+
+// LOGOTIPO
+#logotipo {
+  background: white;
+}
+
+.nad-logo {
+  img {
+    width: 50%;
+
+    @media (max-width: 1024px) {
+      width: 80%;
+    }
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+}
+
+// TIPOGRAFIA
+#tipografia {
+  background: $nad-gris-light;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+  .nad-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+
+  .nad-tipo {
+    h2 {
+      font-size: 35pt;
+      flex-basis: 100%;
+    }
+
+    h3 {
+      font-size: 20pt;
+      flex-basis: 100%;
+    }
+
+    h2,
+    h3,
+    .big-letter,
+    span {
+      font-family: 'Titillium Web', sans-serif;
+      font-weight: 700;
+    }
+
+    color: $nad-azul;
+
+    .big-letter {
+      margin-right: 20px;
+    }
+
+    .box-letter {
+      display: flex;
+      // flex-wrap: wrap;
+
+      flex-basis: 100%;
+
+      // justify-content: space-between;
+      .big-letter {
+        align-items: stretch
+      }
+
+      span {
+        font-size: 30pt;
+        margin-left: 5pt;
+      }
+    }
+  }
+
+  .nad-tipo2 {
+    margin: 2em 0em 4em;
+
+    @media (max-width: 768px) {
+      margin: 1em 0em 2em;
+    }
+
+    h2 {
+      font-size: 25pt;
+    }
+
+    h3 {
+      font-size: 15pt;
+    }
+
+    h2,
+    h3,
+    .big-letter,
+    .small-letter span {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+    }
+
+    color: black;
+
+    .small-letter {
+      padding-right: 20px;
+    }
+  }
+
+  .nad-tipo,
+  .nad-tipo2 {
+    h2 {
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0.25em 0 0.5em;
+    }
+
+    .box-letter {
+      display: flex;
+      align-items: flex-end;
+
+      .big-letter,
+      .small-letter {
+        opacity: 0.2;
+      }
+
+      .big-letter {
+        font-size: 80pt;
+
+        @media (max-width: 1024px) {
+          font-size: 50pt;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 30pt;
+        }
+      }
+
+      .small-letter span {
+        font-size: 34pt;
+
+        @media (max-width: 1024px) {
+          font-size: 24pt;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 12pt;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+// COLORES
+
+#colors {
+  background: white;
+
+  .nad-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3em 0;
+
+
+    .nad-title1 {
+      flex-basis: 100%;
+    }
+
+    .fila-colors {
+      display: flex;
+      justify-content: space-between;
+
+      .box-color {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+
+
+        div {
+          width: 100px;
+          border: 20px solid white;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+          &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+          }
+
+          @media (max-width: 1024px) {
+            width: 80px;
+            border: 2vw solid white;
+          }
+
+          @media (max-width: 768px) {
+            width: 50px;
+          }
+
+          @media (max-width: 500px) {
+            width: 40px;
+          }
+
+        }
+
+        h4 {
+          flex-basis: 100%;
+          text-align: center;
+          font-family: 'Titillium Web', sans-serif;
+          font-weight: 500;
+          font-size: 18pt;
+
+          @media (max-width: 1024px) {
+            font-size: 14pt;
+            margin: 0.5em;
+          }
+
+          @media (max-width: 1024px) {
+            font-size: 12pt;
+            margin: 0.5em 0;
+          }
+        }
+      }
+
+    }
+
+    .fila1 {
+      flex-basis: 65%;
+      margin: 2em 0 1em;
+
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+      }
+    }
+
+    .fila2 {
+      margin-left: 15%;
+      flex-basis: 85%;
+
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+        margin: 0;
+      }
+
+      div:last-child div {
+        border: 20px solid #ededed;
+
+        @media (max-width: 1024px) {
+          border: 2vw solid #ededed;
+        }
+      }
+    }
+  }
+}
+
+#iconos {
+  padding-top: 1em;
+  background: url("../../img/basic/portfolio/06-ux/003-nadira/fondo-iconos.jpg") no-repeat;
+  background-size: cover;
+
+  #nad-servicios,
+  #nad-sectors,
+  #nad-contact {
+    position: relative;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+      min-height: 120vh;
+    }
+
+    @media (max-width: 768px) {
+      min-height: 150vh;
+    }
+
+    @media (max-width: 500px) {
+      min-height: 200vh;
+    }
+
+    .icon-title {
+      position: absolute;
+      z-index: 2;
+      color: white;
+      font-size: 40pt;
+      display: table;
+      opacity: 0.3;
+      font-family: 'Titillium Web', sans-serif;
+    }
+
+
+    .box-icon {
+      position: absolute;
+      z-index: 2;
+      background: white;
+      width: 175px;
+      height: 175px;
+      border-radius: 0.25vw;
+      transition: all ease-in-out 1s;
+
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+
+      img {
+        width: 55%;
+        margin: 5%;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 12pt;
+        line-height: 12pt;
+        padding: 0 10px;
+        font-family: 'Titillium Web', sans-serif;
+        flex-basis: 90%;
+        text-align: center;
+        color: $nad-azul-dark;
+      }
+
+      @media (max-width: 1024px) {
+        width: 175px;
+        height: 175px;
+
+        h3 {
+          font-size: 11pt;
+          line-height: 11pt;
+        }
+
+        img {
+          width: 50%;
+          margin: 20px 0 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        width: 150px;
+        height: 150px;
+
+        h3 {
+          font-size: 10pt;
+          line-height: 10pt;
+          flex-basis: 95%;
+        }
+
+        img {
+          width: 50%;
+          margin: 10px 0 0;
+        }
+      }
+    }
+
+    .icon-title,
+    .cuadrados div {
+      transition: all ease-out 1s;
+    }
+  }
+
+  // SERVICIOS
+  #nad-servicios {
+
+    .icon-title {
+      top: 5vh;
+      left: 32%;
+    }
+
+    #nad-icon-1 {
+      top: -5vh;
+      left: 25%;
+    }
+
+    #nad-icon-2 {
+      top: 40vh;
+      left: 45%;
+    }
+
+    #nad-icon-3 {
+      top: 65vh;
+      left: 30%;
+    }
+
+    #nad-icon-4 {
+      top: 22vh;
+      left: 60%;
+    }
+
+    #nad-icon-5 {
+      top: 43vh;
+      left: 22%;
+    }
+
+    #nad-icon-6 {
+      top: 100vh;
+      left: 50%;
+    }
+
+    .cuadrados {
+      div {
+        position: absolute;
+        z-index: 1;
+      }
+
+      div:nth-child(1) {
+        width: 120px;
+        height: 120px;
+        border: 6px solid $nad-azul;
+        opacity: 0.6;
+        top: -40vh;
+        left: 20%;
+      }
+
+      div:nth-child(2) {
+        width: 34%;
+        height: 25vh;
+        border: 5px solid $nad-azul-light;
+        opacity: 1;
+        top: 75vh;
+        left: 33%;
+      }
+
+      div:nth-child(3) {
+        width: 125px;
+        height: 125px;
+        border: 6px solid $nad-azul;
+        opacity: 1;
+        top: -25vh;
+        left: 62%;
+      }
+
+      div:nth-child(4) {
+        width: 30%;
+        height: 25vh;
+        border: 4px solid $nad-azul;
+        opacity: 1;
+        top: 20vh;
+        left: 25%;
+      }
+
+      div:nth-child(5) {
+        width: 120px;
+        height: 120px;
+        border: 6px solid $nad-azul;
+        opacity: 0.6;
+        top: 106vh;
+        left: 60%;
+      }
+
+      div:nth-child(6) {
+        width: 60px;
+        height: 60px;
+        border: 4px solid $nad-azul-light;
+        opacity: 0.4;
+        top: 135vh;
+        left: 75%;
+      }
+    }
+
+    // SERVICIOS 1024
+    @media (max-width: 1024px) {
+      .icon-title {
+        top: -5vh;
+        left: 38%;
+      }
+
+      #nad-icon-1 {
+        top: 10vh;
+        left: 10%;
+      }
+
+      #nad-icon-2 {
+        top: 20vh;
+        left: 45%;
+      }
+
+      #nad-icon-3 {
+        top: 65vh;
+        left: 30%;
+      }
+
+      #nad-icon-4 {
+        top: 40vh;
+        left: 70%;
+      }
+
+      #nad-icon-5 {
+        top: 70vh;
+        left: 15%;
+      }
+
+      #nad-icon-6 {
+        top: 110vh;
+        left: 60%;
+      }
+
+      .cuadrados {
+
+        div {
+          position: absolute;
+          z-index: 1;
+        }
+
+        div:nth-child(1) {
+          width: 120px;
+          height: 120px;
+          top: -20vh;
+          left: 5%;
+        }
+
+        div:nth-child(2) {
+          width: 34%;
+          height: 35vh;
+          top: 50vh;
+          left: 20%;
+        }
+
+        div:nth-child(3) {
+          width: 125px;
+          height: 125px;
+          top: 60vh;
+          left: 70%;
+        }
+
+        div:nth-child(4) {
+          width: 35%;
+          height: 25vh;
+          top: 40vh;
+          left: 25%;
+        }
+
+        div:nth-child(5) {
+          width: 25%;
+          height: 20vh;
+          top: 75vh;
+          left: 50%;
+        }
+
+        div:nth-child(6) {
+          width: 100px;
+          height: 100px;
+          top: 115vh;
+          left: 30%;
+        }
+      }
+    }
+
+    // SERVICIOS 700
+    @media (max-width: 768px) {
+
+      .icon-title {
+        top: -10vh;
+        left: 0%;
+        font-size: 30pt;
+      }
+
+      #nad-icon-1 {
+        top: -10vh;
+        left: 5%;
+      }
+
+      #nad-icon-2 {
+        top: 63vh;
+        left: 45%;
+      }
+
+      #nad-icon-3 {
+        top: 100vh;
+        left: 20%;
+      }
+
+      #nad-icon-4 {
+        top: 75vh;
+        left: 40%;
+      }
+
+      #nad-icon-5 {
+        top: 95vh;
+        left: 10%;
+      }
+
+      #nad-icon-6 {
+        top: 215vh;
+        left: 45%;
+      }
+
+      .cuadrados {
+
+        div {
+          position: absolute;
+          z-index: 1;
+        }
+
+        div:nth-child(1) {
+          width: 120px;
+          height: 120px;
+          top: 10vh;
+          left: 35%;
+        }
+
+        div:nth-child(2) {
+          width: 34%;
+          height: 30vh;
+          top: 75vh;
+          left: 20%;
+        }
+
+        div:nth-child(3) {
+          width: 125px;
+          height: 125px;
+          top: 90vh;
+          left: 40%;
+        }
+
+        div:nth-child(4) {
+          width: 45%;
+          height: 40vh;
+          top: 70vh;
+          left: 10%;
+        }
+
+        div:nth-child(5) {
+          width: 25vh;
+          height: 25vh;
+          top: 110vh;
+          left: 45%;
+        }
+
+        div:nth-child(6) {
+          width: 100px;
+          height: 100px;
+          top: 140vh;
+          left: 30%;
+        }
+      }
+    }
+
+  }
+
+  // SECTORES
+  #nad-sectors {
+    .icon-title {
+      top: -5vh;
+      left: 25%;
+    }
+
+    #nad-icon-7 {
+      top: -8vh;
+      left: 25%;
+    }
+
+    #nad-icon-8 {
+      top: -10vh;
+      left: 55%;
+    }
+
+    #nad-icon-9 {
+      top: 62vh;
+      left: 45%;
+    }
+
+    #nad-icon-10 {
+      top: 80vh;
+      left: 20%;
+    }
+
+    #nad-icon-11 {
+      top: 35vh;
+      left: 40%;
+    }
+
+    #nad-icon-12 {
+      top: 110vh;
+      left: 60%;
+    }
+
+    .cuadrados {
+
+      div {
+        position: absolute;
+        z-index: 1;
+      }
+
+      div:nth-child(1) {
+        width: 125px;
+        height: 125px;
+        border: 5px solid $nad-azul-light;
+        opacity: 0.3;
+        top: -20vh;
+        left: 20%;
+      }
+
+      div:nth-child(2) {
+        width: 34%;
+        height: 30vh;
+        border: 5px solid $nad-azul-light;
+        opacity: 1;
+        top: 40vh;
+        left: 33%;
+      }
+
+      div:nth-child(3) {
+        width: 20%;
+        height: 35vh;
+        border: 6px solid $nad-azul;
+        opacity: 1;
+        top: 80vh;
+        left: 25%;
+      }
+
+      div:nth-child(4) {
+        width: 25%;
+        height: 20vh;
+        border: 6px solid $nad-azul-light;
+        opacity: 0.5;
+        top: 45vh;
+        left: 42%;
+      }
+
+      div:nth-child(5) {
+        width: 120px;
+        height: 120px;
+        border: 6px solid $nad-azul;
+        opacity: 0.8;
+        top: -13vh;
+        left: 62%;
+      }
+
+      div:nth-child(6) {
+        width: 60px;
+        height: 60px;
+        border: 4px solid $nad-azul;
+        opacity: 0.5;
+        top: 115vh;
+        left: 70%;
+      }
+    }
+
+    // SECTORES 1024
+    @media (max-width: 1024px) {
+      .icon-title {
+        top: 0vh;
+        left: 20%;
+      }
+
+      #nad-icon-7 {
+        top: -10vh;
+        left: 15%;
+      }
+
+      #nad-icon-8 {
+        top: -5vh;
+        left: 65%;
+      }
+
+      #nad-icon-9 {
+        top: 60vh;
+        left: 50%;
+      }
+
+      #nad-icon-10 {
+        top: 90vh;
+        left: 20%;
+      }
+
+      #nad-icon-11 {
+        top: 60vh;
+        left: 45%;
+      }
+
+      #nad-icon-12 {
+        top: 95vh;
+        left: 70%;
+      }
+
+      .cuadrados {
+        div {
+          position: absolute;
+          z-index: 1;
+        }
+
+        div:nth-child(1) {
+          width: 150px;
+          height: 150px;
+          top: -10vh;
+          left: 10%;
+        }
+
+        div:nth-child(2) {
+          width: 40%;
+          height: 30vh;
+          top: 35vh;
+          left: 30%;
+        }
+
+        div:nth-child(3) {
+          width: 20%;
+          height: 26vh;
+          top: 68vh;
+          left: 28%;
+        }
+
+        div:nth-child(4) {
+          width: 25%;
+          height: 20vh;
+          top: 45vh;
+          left: 55%;
+        }
+
+        div:nth-child(5) {
+          width: 150px;
+          height: 150px;
+          top: 45vh;
+          left: 35%;
+        }
+
+        div:nth-child(6) {
+          width: 100px;
+          height: 100px;
+          top: 100vh;
+          left: 65%;
+        }
+      }
+    }
+
+    // SECTORES 700
+    @media (max-width: 768px) {
+
+      .icon-title {
+        top: 0vh;
+        left: -20%;
+        font-size: 30pt;
+      }
+
+      #nad-icon-7 {
+        top: -10vh;
+        left: 15%;
+      }
+
+      #nad-icon-8 {
+        top: 15vh;
+        left: 40%;
+      }
+
+      #nad-icon-9 {
+        top: 115vh;
+        left: 45%;
+      }
+
+      #nad-icon-10 {
+        top: 170vh;
+        left: 20%;
+      }
+
+      #nad-icon-11 {
+        top: 100vh;
+        left: 45%;
+      }
+
+      #nad-icon-12 {
+        top: 225vh;
+        left: 10%;
+      }
+
+      .cuadrados {
+
+        div {
+          position: absolute;
+          z-index: 1;
+        }
+
+        div:nth-child(1) {
+          width: 25vh;
+          height: 25vh;
+          top: 30vh;
+          left: 25%;
+        }
+
+        div:nth-child(2) {
+          width: 40%;
+          height: 30vh;
+          top: 60vh;
+          left: 30%;
+        }
+
+        div:nth-child(3) {
+          width: 35%;
+          height: 30vh;
+          top: 175vh;
+          left: 15%;
+        }
+
+        div:nth-child(4) {
+          width: 25%;
+          height: 20vh;
+          top: 110vh;
+          left: 55%;
+        }
+
+        div:nth-child(5) {
+          width: 150px;
+          height: 150px;
+          top: 45vh;
+          left: 35%;
+        }
+
+        div:nth-child(6) {
+          width: 15vh;
+          height: 15vh;
+          top: 185vh;
+          left: 45%;
+        }
+      }
+    }
+  }
+
+  // CONTACTO
+  #nad-contact {
+
+    .icon-title {
+      top: 11vh;
+      left: 41%;
+    }
+
+    #nad-icon-13 {
+      top: 60vh;
+      left: 15%;
+    }
+
+    #nad-icon-14 {
+      top: -10vh;
+      left: 60%;
+    }
+
+    #nad-icon-15 {
+      top: 90vh;
+      left: 40%;
+    }
+
+    .cuadrados {
+      div {
+        position: absolute;
+        z-index: 1;
+      }
+
+      div:nth-child(1) {
+        width: 90px;
+        height: 90px;
+        border: 5px solid $nad-azul;
+        opacity: 0.7;
+        top: -40vh;
+        left: 32%;
+      }
+
+      div:nth-child(2) {
+        width: 20%;
+        height: 35vh;
+        border: 5px solid $nad-azul-light;
+        opacity: 0.7;
+        top: 45vh;
+        left: 18%;
+      }
+
+      div:nth-child(3) {
+        width: 40%;
+        height: 35vh;
+        border: 5px solid $nad-azul;
+        opacity: 1;
+        top: -5vh;
+        left: 25%;
+      }
+
+      div:nth-child(4) {
+        width: 20vh;
+        height: 20vh;
+        border: 7px solid $nad-azul;
+        opacity: 0.5;
+        top: 65vh;
+        left: 15%;
+      }
+
+      div:nth-child(5) {
+        width: 20%;
+        height: 30vh;
+        border: 5px solid $nad-azul-light;
+        opacity: 0.6;
+        top: 23vh;
+        left: 62%;
+      }
+
+      div:nth-child(6) {
+        width: 15vh;
+        height: 15vh;
+        border: 6px solid $nad-azul;
+        opacity: 0.8;
+        top: 08vh;
+        left: 52%;
+      }
+
+      div:nth-child(7) {
+        width: 10vh;
+        height: 10vh;
+        border: 4px solid $nad-azul-light;
+        opacity: 0.7;
+        top: 150vh;
+        left: 25%;
+      }
+    }
+
+    // CONTACTO 1024
+    @media (max-width: 1024px) {
+      .icon-title {
+        top: 5vh;
+        left: -20%;
+      }
+
+      #nad-icon-13 {
+        top: 60vh;
+        left: 15%;
+      }
+
+      #nad-icon-14 {
+        top: 10vh;
+        left: 60%;
+      }
+
+      #nad-icon-15 {
+        top: 120vh;
+        left: 40%;
+      }
+
+      .cuadrados {
+
+        div {
+          position: absolute;
+          z-index: 1;
+        }
+
+        div:nth-child(1) {
+          width: 10vh;
+          height: 10vh;
+          top: -15vh;
+          left: 6%;
+        }
+
+        div:nth-child(2) {
+          width: 25%;
+          height: 30vh;
+          top: 95vh;
+          left: 20%;
+        }
+
+        div:nth-child(4) {
+          top: 75vh;
+          left: 15%;
+        }
+
+        div:nth-child(5) {
+          width: 20%;
+          height: 30vh;
+          top: 50vh;
+          left: 70%;
+        }
+
+        div:nth-child(5) {
+          top: 45vh;
+        }
+
+        div:nth-child(6) {
+          top: 0vh;
+        }
+
+        div:nth-child(7) {
+          width: 15vh;
+          height: 15vh;
+          top: 95vh;
+          left: 65%;
+        }
+      }
+    }
+
+    // CONTACTO 700
+    @media (max-width: 768px) {
+
+      .icon-title {
+        top: 20vh;
+        left: -50%;
+        font-size: 30pt;
+      }
+
+      #nad-icon-13 {
+        top: 100vh;
+        left: 10%;
+      }
+
+      #nad-icon-14 {
+        top: 30vh;
+        left: 45%;
+      }
+
+      #nad-icon-15 {
+        top: 200vh;
+        left: 30%;
+      }
+
+      .cuadrados {
+
+        div:nth-child(1) {
+          width: 20vh;
+          height: 20vh;
+          top: 65vh;
+          left: 30%;
+        }
+
+        div:nth-child(2) {
+          width: 40%;
+          height: 50vh;
+          top: 90vh;
+          left: 20%;
+        }
+
+        div:nth-child(3) {
+          width: 45%;
+          height: 40vh;
+          top: 50vh;
+          left: 10%;
+        }
+
+        div:nth-child(4) {
+          width: 30vh;
+          height: 45vh;
+          top: 100vh;
+          left: 35%;
+        }
+
+        div:nth-child(5) {
+          width: 30%;
+          height: 20vh;
+          top: 20vh;
+          left: 40%;
+        }
+
+        div:nth-child(6) {
+          top: 65vh;
+          left: 15%;
+        }
+
+        div:nth-child(7) {
+          width: 15vh;
+          height: 15vh;
+          top: 270vh;
+          left: 65%;
+        }
+      }
+    }
+
+  }
+}
+
+
+// PANTALLAS
+
+#pantallas {
+
+  background: white;
+
+  .nad-container {
+    .nad-title1 {
+      flex-basis: 100%;
+    }
+
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .col-6 {
+      // display: flex; 
+      flex-basis: 49%;
+      position: relative;
+
+      img {
+        width: 95%;
+        border: 1px solid;
+        position: relative;
+        z-index: 2
+      }
+
+      h3 {
+        font-size: 14pt;
+        color: $nad-gris;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+      }
+
+      .pant-img {
+
+        img {
+          width: 100%;
+        }
+
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        &:after {
+          content: ' ';
+          position: absolute;
+          border: 5px solid $nad-azul;
+          width: 99%;
+          height: 100%;
+          z-index: 0;
+        }
+      }
+    }
+
+    .col-6:nth-child(3) {
+      margin-top: 20vh;
+    }
+
+    .col-6:nth-child(4) {
+      margin-top: 20vh;
+    }
+
+    .col-6:nth-child(5) {
+      margin-top: -10vh;
+    }
+
+    .col-6:nth-child(7) {
+      margin-top: -15vh;
+    }
+
+    @media (max-width: 1024px) {
+      .col-6 {
+        flex-basis: 100%;
+      }
+
+      .col-6:nth-child(3) {
+        margin-top: 10vh;
+      }
+
+      .col-6:nth-child(4) {
+        margin-top: 10vh;
+      }
+
+      .col-6:nth-child(5) {
+        margin-top: 10vh;
+      }
+
+      .col-6:nth-child(7) {
+        margin-top: 10vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .col-6 h3 {
+        font-size: 12pt;
+      }
+    }
+
+    .pant-izda {
+      h3 {
+        text-align: left;
+        padding-left: 5px;
+      }
+
+      .pant-img:after {
+        top: 30px;
+        left: -5%;
+      }
+    }
+
+    .pant-dcha {
+      h3 {
+        text-align: left;
+        margin-right: 5%;
+        padding-left: 5px;
+      }
+
+      .pant-img:after {
+        top: 30px;
+        left: 5%;
+      }
+    }
+  }
+}
+
+// NADIRA FOOTER
+
+#nad-footer {
+  background: url('../../img/basic/portfolio/06-ux/003-nadira/fondo-iconos.jpg') no-repeat;
+  background-size: cover;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  padding: 2em 0 4em;
+
+  .nad-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 200px;
+
+
+    p,
+    h3 {
+      flex-basis: 100%;
+      text-align: center;
+      color: white;
+      font-size: 12pt;
+    }
+
+    h3 {
+      font-size: 14pt;
+    }
+
+    .figure a .figure-ux {
+      width: 200px;
+      transform: scale(1);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin: 20px;
+      transition: all 0.4s ease-out;
+
+      &:hover {
+        transform: scale(0.99);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        margin: 25px 20px 15px 20px;
+      }
+    }
+  }
+}
+
+// fin NADIRA FOOTER

@@ -1,0 +1,147 @@
+
+// error 404
+
+#error{
+	margin: auto;
+	width: 100%;
+	max-width: 1400px;
+	height: 100%;
+	overflow: hidden;
+	
+	.error-title{
+		// border: 1px solid orange;
+		display: flex;
+		justify-content: space-between;
+		padding: 2em 3em;
+				h1{ 
+				font-size: 18pt; 
+				font-weight: $regular;
+				color: #9aa8b2;
+			}
+	}
+
+	.error-404{
+
+		width: 70%;
+		height: 50vh;
+		// border: 1px solid blue;
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+					margin: auto;  
+
+		img{
+			// border: 1px solid;
+			width: 100%;
+			height: 100%;
+			background: contain;
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			margin: auto;  
+		}
+		
+		.back-error{ z-index: 0; }
+		.cero{ z-index: 2; }
+		.primer-cuatro{ z-index: 1; }
+		.segundo-cuatro{ z-index: 3; }
+
+	}
+
+
+	.error-final{
+		position: absolute;
+		bottom: 3em;
+		// border: 1px solid green;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		h2{ 
+				flex-basis: 100%;
+				font-size: 16pt; 
+				font-weight: $regular;
+				color: #666;
+				text-align: center;
+				margin-bottom: 2em;
+		 }
+
+		 a:nth-child(2) button{background: $azul;}
+		 a:nth-child(3) button{background: $verde;}
+		 a:nth-child(4) button{background: $magenta;}
+		 a:nth-child(5) button{background: $cyan;}
+		 a:nth-child(6) button{background: $naranja;}
+		 a:nth-child(7) button{background: $morado;}
+
+		 button{
+		 	border: none;
+		 	color: white;
+		 	font-size: 12pt;
+		 	padding: 0.5em 2em;
+		 	border-radius: 2em;
+			font-weight: $bold;
+		 }
+	}
+
+}
+
+@media (max-width: 1024px) {
+	#error{
+		.error-title{
+			flex-wrap: wrap;
+
+			h1{ 
+				flex-basis: 100%; 
+				padding: 0; margin: 0.25em; 
+				&:first-child{ text-align: left;}
+				&:last-child{ text-align: right;}
+			}
+		}
+
+		.error-final{
+			width: 90%;
+			left: 0; right: 0;
+			margin: 0 auto; 
+			a{ 
+				display: flex;
+				flex-basis: 30%;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				margin-bottom: 0.5em; 
+			 }
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	#error{
+		.error-title{
+			padding: 1em; 
+			h1{ font-size: 12pt; }
+		}
+		.error-404{
+		width: 80%;
+		height: 30vh;		
+		position: relative;
+		}
+		.error-final{
+			bottom: 0.5em;
+			h2{ font-size: 10pt; }
+			a{
+				justify-content: space-between;
+				flex-basis: 40%;
+				align-items: center;
+				&:nth-child(even){ margin-left: -5px; }
+				&:nth-child(odd){ margin-right: -5px; }
+				button{
+					width: 140px;
+					font-size: 9pt;					
+				}
+				
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,320 @@
+
+// PORTADA
+// #ilust{ visibility: hidden; }
+
+.pos-left, .pos-right{ position: absolute; opacity: 0; }
+.pos-left{ margin-left: -5%; }
+.pos-right{ margin-left: 5%; }
+
+// PORTADA
+
+#des, #ilust, #web, #video, #bbaa, #ux{
+  transition: margin 2s ease, transform 0.5s ease-out;
+
+}
+
+html, body{ height: 100%; }
+
+
+
+#portada{
+  @include wh100;
+      .slogan-box{
+            margin-top: 30%;
+            width: 450px;
+
+        .slogan{
+          font-weight: $regular;
+          letter-spacing: 1px;
+          color: $gris-dark;  
+          font-size: $descript;
+          line-height: $int-ymedio;   
+        }
+
+        button{
+          padding: 1em 1.5em;
+          margin-top: 1em;
+          text-transform: uppercase;
+          color: white;
+          border: none;
+          border-radius: $radius1;
+          font-size: $texto;
+          font-weight: $bold;
+          letter-spacing: 0.5px;
+          cursor: pointer;            
+          color: white;
+          text-decoration: none;
+          
+              &:focus{ outline-style: none; }
+        }
+    }
+    
+    .section{
+      position: absolute;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+
+      .fondo{
+        width: 100%;
+        height: 100%;     
+      }
+      .slogan-box{
+        z-index: 2;
+      }
+      .slogan-box button{ 
+          color: white;
+          transition: $normal;
+          cursor: pointer;        
+       }
+
+    }
+
+    #des{
+      .slogan-box button{
+        background: $azul;
+        &:hover{  background: $azul-dark; }
+      }
+      .little-explain{ color: $azul-dark;}
+      .barra-tiempo{@include deg-azul;}
+    }
+    #ilust{
+      .slogan-box button{
+        background: $verde;
+        &:hover{  background: $verde-dark; }
+      }
+      .little-explain{ color: $verde-dark;}
+      .barra-tiempo{@include deg-verde;}
+    }
+    #web{
+      .slogan-box button{
+        background: $magenta;
+        &:hover{  background: $magenta-dark; }
+      }
+      .little-explain{ color: $magenta-dark;}
+      .barra-tiempo{@include deg-magenta;}
+    }
+    #video{
+      .slogan-box button{
+        background: $cyan;
+        &:hover{  background: $cyan-dark; }
+      }
+      .little-explain{ color: #02a8c9;}
+      .barra-tiempo{@include deg-cyan;}
+    }
+    #bbaa{
+      .slogan-box button{
+        background: $naranja;
+        &:hover{  background: $naranja-dark; }
+      }
+      .little-explain{ color: $naranja-dark;}
+      .barra-tiempo{@include deg-naranja;}
+    }
+    #ux{
+      .slogan-box button{
+        background: $morado;
+        &:hover{  background: $morado-dark; }
+      }
+      .little-explain{ color: white;}
+      .barra-tiempo{@include deg-morado;}
+    }
+
+.on-top{
+  z-index: 5 !important;
+}
+
+
+.container{
+  position: absolute;
+  @include mauto;
+  
+  .first-ilustration{
+    position: absolute;   
+    right: 5%;
+    top: 30%;
+  }
+}
+  .little-explain{
+    position: absolute;
+    bottom: 3em; right: 3em;
+    font-size: 11pt;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+  }
+
+}
+
+
+// PUNTOS
+#portada-points {
+  position: absolute;
+  height: 20px;
+  @include mauto;
+  margin-bottom: 0;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  bottom: 5em;
+
+  li{
+    cursor: pointer;
+    list-style: none;
+    background: white;
+    border-radius: 50%;
+    box-shadow: $sombra;
+    border: 5px solid white;    
+    width: 0px; height: 0px;
+    // @include flex-center;    
+    margin: auto 8px; 
+    transition: $normal;
+
+
+        &:hover, &.active{
+        width: 10px; height: 10px;  
+        border: 3px solid white;        
+        }   
+    }
+
+    $i: 1;
+    @each $colores in ($azul-dark, $verde, $magenta-dark, $cyan-dark, $naranja-dark, $morado-dark){     
+         li:nth-child(#{$i}) {
+          background: $colores; 
+        }     
+      $i: $i +1;  
+  }
+
+}
+
+// BARRA
+.barra-tiempo{
+  position: absolute;
+  z-index: 4;
+  bottom: 0px;
+  width: 0%;
+  height: 6px;
+  
+}
+
+
+// MEDIA QUERIES
+@media (max-width: 1100px) {
+
+  #portada{ 
+    // height: auto; 
+    // position: relative;
+    #portada-points{
+      // margin-bottom: 1em;
+      li{ 
+        margin: 15px; 
+        border: 10px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                &:hover{ 
+                width: 15px; height: 15px; 
+                border: 5px solid white;
+                margin-top: 12.5px;
+              }            
+         }
+         .active{
+          width: 15px; height: 15px; 
+          border: 5px solid white; 
+          margin-top: 12.5px;
+         }
+    }
+
+    #ux .little-explain{
+      color: $morado-dark;
+    }
+    .section{
+        .fondo{
+          width: 100%;
+            height: 71%;
+            bottom: 0px;
+            position: absolute;
+            z-index: -2;
+        }
+        .little-explain{ 
+            position: absolute;
+            bottom: 2em;
+            right: 0;
+            left: 0;
+            text-align: center;
+            margin: auto;
+            width: 90%;
+            font-size: 11pt; 
+            font-weight: $bold;
+            // -webkit-text-stroke: 1px white;
+            // text-shadow:   -1px -1px 0 white,  
+            //               1px -1px 0 white,
+            //               -1px 1px 0 white,
+            //               1px 1px 0 white;
+      }
+      .slogan-box{
+        margin-top: 17em;
+        max-width: 450px;
+        width: 80%;
+        font-size: 12pt;
+      }
+      .first-ilustration{
+        top: auto;
+        bottom: 6em;
+        width: 40%;
+      }
+    } 
+
+  }
+
+}
+@media (max-width: 900px) {
+  #portada .section .first-ilustration{
+        top: auto;
+        bottom: 7em;
+        width: 60%;       
+  }
+}
+
+@media (max-width: 768px) {
+  #portada{
+    #portada-points{
+      padding: 0;
+      bottom: 2em;
+      justify-content: space-around;
+      width: 85%;
+      li{ margin: auto; margin-top: 15px;  }
+    }
+    .section{
+        .little-explain{ bottom: 4em; }
+        .first-ilustration{
+          right: 0; left: 0;
+          margin: auto;
+          top: auto;
+          bottom: 7em;
+          width: 50%;
+        }
+        .slogan-box{
+          margin-top: 26vh;
+          width: 100%;
+          max-width: 100%;
+          button{
+              padding: 0.5em 1em;
+              font-size: 0.9em;
+              margin-top: 0em;
+          }
+          .slogan{ font-size: 1.2em; }
+        }
+      }
+  }
+}
+@media (max-width: 500px) {
+  #portada {
+      .section{
+        .slogan-box .slogan{ font-size: 0.8em; }
+        .first-ilustration{ 
+              top: auto;
+              bottom: 6.5em;
+              width: 55%;
+        }
+    }
+    #web .first-ilustration, #bbaa .first-ilustration,{ bottom: 5.5em; } 
+  }
+}
+

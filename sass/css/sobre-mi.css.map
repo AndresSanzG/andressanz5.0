@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../modulos/sobre-mi.scss"
+    ],
+    "names": [],
+    "file": "sobre-mi.css"
+}

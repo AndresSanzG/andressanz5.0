@@ -1,0 +1,330 @@
+// MENU Y LOGO
+
+.bajo-header {
+  height: 100px;
+}
+
+header {
+
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+
+  nav {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid transparent;
+  }
+
+  .menu-intro,
+  .menu-scroll {
+    @include mp0;
+  }
+}
+
+.header-intro {
+  background: transparent;
+  height: auto;
+  transition: $rapida;
+}
+
+.header-scroll {
+  background: white;
+  box-shadow: $sombra-menu;
+  height: 65px;
+  transition: $muy-lenta;
+
+
+  .menu-intro,
+  .menu-scroll {
+    top: 0.5em;
+
+    li {
+      padding: 0.5em 0;
+    }
+  }
+}
+
+// LOGO
+#logo {
+  position: relative;
+  transition: $lenta;
+
+  h1 {
+    font-weight: $medium;
+    @include mp0;
+    transition: $lenta;
+    opacity: 0;
+  }
+
+  h2 {
+    font-weight: $regular;
+    text-transform: uppercase;
+    @include mp0;
+    transition: $lenta;
+    opacity: 0;
+  }
+}
+
+.logo-intro {
+  display: table;
+  position: absolute;
+  margin-top: 16%;
+
+  h1 {
+    font-size: $titulo;
+  }
+
+  h2 {
+    font-size: $sub-titulo;
+    letter-spacing: 0.5vw;
+  }
+}
+
+.logo-scroll {
+  margin-top: 0.5em !important;
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 0.6em;
+    letter-spacing: 2pt;
+  }
+}
+
+#lspa, #leng {
+  position: absolute;
+  right: 0;
+  top: 12.5px;
+  // top: 80px;
+  bottom: 0;
+  font-size: 9pt;
+  border: 1px solid $gris;
+  color: $gris;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border: 1px solid $gris-dark;
+    color: $gris-dark;
+    // font-weight: bold;
+  }
+}
+#lspa{display: none;}
+
+// MENU
+#menu {
+  list-style: none;
+  position: absolute;
+  display: flex;
+  width: auto;
+  right: 50px;
+  top: 0;
+
+  li {
+    @include flex-center;
+    flex: 1;
+    min-width: 150px;
+    text-transform: uppercase;
+    padding: 1em 0;
+    opacity: 0;
+    transition: $lenta;
+
+    a {
+      text-decoration: none;
+      font-size: $texto;
+      color: $gris;
+      padding: 0.5em 2em;
+      border-radius: $radius1;
+      // width: 100%;
+      text-align: center;
+      transition: $lenta;
+
+      &:hover {
+        color: white;
+        transition: $normal;
+        background: $azul;
+        // box-shadow: $sombra;
+      }
+    }
+
+    .activee {
+      color: white;
+      transition: $normal;
+      background: $azul;
+    }
+    .active{color: white;}
+
+    .destroy-active {
+      color: $gris !important;
+      background: none !important;
+    }
+  }
+
+}
+
+
+// MEDIA QUERIES
+
+@media (max-width: 1100px) {
+  #menu {
+    width: 100%;
+  }
+
+  .logo-scroll {
+    text-align: center;
+
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+
+  .header-scroll {
+    height: 6em;
+    transition: $normal;
+  }
+
+  header {
+    width: 100%;
+
+    .logo-intro {
+      margin-left: 6%;
+      margin-top: 5em;
+      width: 80%;
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+    nav {
+      width: 95% !important;
+    }
+
+    .menu-intro {
+      margin-top: 0.5em;
+    }
+
+    .menu-scroll {
+      margin-top: 2.8em;
+    }
+
+    #menu {
+      transition: $normal;
+
+      li {
+        min-width: auto;
+
+        a {
+          font-weight: $medium;
+        }
+      }
+
+      right: 0;
+    }
+  }
+
+  .bajo-header {
+    height: 7em;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  header {
+    .logo-intro {
+      width: 100%;
+      margin-top: 3em;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .menu-intro {
+      margin-top: 0;
+    }
+
+    #menu li {
+      a {
+        font-size: 12px;
+      }
+    }
+
+    #leng {
+      top: 10px;
+      right: 0px;
+      width: 25px;
+      border: 1px solid $gris;
+      font-weight: 500;
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+  header {
+    .logo-intro {
+      width: 100%;
+      margin-top: 3.5em;
+      text-align: center;
+
+      // border: 1px solid blue;
+      h1 {
+        font-size: 5vh;
+      }
+
+      h2 {
+        font-size: 2.5vh;
+      }
+    }
+
+    .logo-scroll {
+      width: 95%;
+      // border: 1px solid blue;
+      margin: 0 auto;
+      text-align: left;
+      top: 5px;
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 12px;
+      }
+    }
+
+    #menu li a {
+      color: $gris-dark;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 1em;
+    }
+
+    #leng {
+      top: 18px;
+      right: 5px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $gris;
+      font-weight: 500;
+      font-size: 9pt;
+    }
+
+  }
+}
